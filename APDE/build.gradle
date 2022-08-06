@@ -73,7 +73,6 @@ android {
     lintOptions {
         abortOnError false
     }
-    buildToolsVersion = '29.0.3'
 
     useLibrary 'android.test.runner'
     useLibrary 'android.test.base'
