@@ -12,8 +12,9 @@ public class Keyword {
 	
 	private String parentClass;
 	private boolean staticInParentClass;
+	private boolean touchable;
 	
-	public Keyword(String name, TextPaint paint, boolean function, String reference, String referenceTarget, String parentClass, boolean staticInParentClass) {
+	public Keyword(String name, TextPaint paint, boolean function, String reference, String referenceTarget, String parentClass, boolean staticInParentClass, boolean touchable) {
 		this.name = name;
 		this.paint = paint;
 		this.function = function;
@@ -21,6 +22,7 @@ public class Keyword {
 		this.referenceTarget = referenceTarget;
 		this.parentClass = parentClass;
 		this.staticInParentClass = staticInParentClass;
+		this.touchable = touchable;
 	}
 	
 	public String name() {
@@ -50,4 +52,6 @@ public class Keyword {
 	public boolean isStatic() {
 		return staticInParentClass;
 	}
+
+	public boolean isTouchable() { return touchable; }
 }

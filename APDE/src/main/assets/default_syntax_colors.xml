@@ -3,21 +3,22 @@
     <!-- this file defines the default syntax highlighter styling rules -->
     <styles>
         <!-- custom styles - standard Processing pallete -->
-        <style color="#FF5F95C9" bold="true">keyword_processing_function_bold</style>
-        <style color="#FF5F95C9">keyword_processing_function</style>
-        <style color="#FFE8B665">keyword_type</style>
-        <style color="#FF89DBC7">keyword_structure</style>
+        <style color="#FF61AEEF" bold="true">keyword_processing_function_bold</style>
+        <style color="#FF61AEEF">keyword_processing_function</style>
+        <style color="#FFC679DD">keyword_type</style>
+        <style color="#FFC679DD">keyword_structure</style>
         <style color="#FFD693B2">keyword_processing_variable</style>
-        <style color="#FF8CB476">keyword_processing_constant</style>
+        <style color="#FFE8B665">keyword_processing_constant</style>
+        <style color="#FFC679DD">operators</style>
         
         <!-- required styles -->
         <style color="#FF000000">base</style>
-        <style color="#FF999999">comment_single</style>
-        <style color="#FF999999">comment_multi</style>
-        <style color="#FFD693B2" bold="true">literal_string_incomplete</style>
-        <style color="#FFD693B2">literal_string</style>
-        <style color="#FFD693B2" bold="true">literal_char_incomplete</style>
-        <style color="#FFD693B2">literal_char</style>
+        <style color="#FF59626F">comment_single</style>
+        <style color="#FF59626F">comment_multi</style>
+        <style color="#FF98C379" bold="true">literal_string_incomplete</style>
+        <style color="#FF98C379">literal_string</style>
+        <style color="#FF98C379" bold="true">literal_char_incomplete</style>
+        <style color="#FF98C379">literal_char</style>
     </styles>
     
     <keywords>
@@ -531,7 +532,33 @@
         
         <keyword style="keyword_processing_function" function="PrintWriter" class="String" reference_target="PrintWriter">close</keyword>
         <keyword style="keyword_processing_function" function="PrintWriter" class="String" reference_target="PrintWriter">flush</keyword>
-        
+
+        <!-- operators -->
+        <keyword style="operators" touchable="true">==</keyword>
+        <keyword style="operators" touchable="true">!</keyword>
+        <keyword style="operators" touchable="true">=</keyword>
+        <keyword style="operators" touchable="true">!=</keyword>
+        <keyword style="operators" touchable="true">*</keyword>
+        <keyword style="operators" touchable="true">/</keyword>
+        <keyword style="operators" touchable="true">%</keyword>
+        <keyword style="operators" touchable="true">+</keyword>
+        <keyword style="operators" touchable="true">-</keyword>
+        <keyword style="operators" touchable="true">&amp;</keyword>
+        <keyword style="operators" touchable="true">^</keyword>
+        <keyword style="operators" touchable="true">|</keyword>
+        <keyword style="operators" touchable="true">&amp;&amp;</keyword>
+        <keyword style="operators" touchable="true">||</keyword>
+        <keyword style="operators" touchable="true">?</keyword>
+        <keyword style="operators" touchable="true">:</keyword>
+        <keyword style="operators" touchable="true">+=</keyword>
+        <keyword style="operators" touchable="true">-=</keyword>
+        <keyword style="operators" touchable="true">*=</keyword>
+        <keyword style="operators" touchable="true">/=</keyword>
+        <keyword style="operators" touchable="true">%=</keyword>
+        <keyword style="operators" touchable="true">++</keyword>
+        <keyword style="operators" touchable="true">--</keyword>
+
+
         <!-- types -->
         <keyword style="keyword_type">true</keyword>
         <keyword style="keyword_type">false</keyword>

@@ -149,7 +149,7 @@ public class CodeEditText extends AppCompatEditText {
 		//Create the line highlight Paint
 		lineHighlight = new Paint();
 		lineHighlight.setStyle(Paint.Style.FILL);
-		lineHighlight.setColor(0x66AACCFF);
+		lineHighlight.setColor(0x88383D48);
 		
 		//Create the bracket match Paint
 		bracketMatch = new Paint();
@@ -433,6 +433,8 @@ public class CodeEditText extends AppCompatEditText {
 			
 			String parentClass = keyword.getString("class", "");
 			boolean staticInParentClass = Boolean.valueOf(keyword.getString("static", "false"));
+
+			boolean touchable = keyword.getString("touchable", "false").equals("true");
 			
 			// If there is a parent class, then open that class... we don't know how to be fancier yet
 			// Automatically add an underscore if the keyword is a function and doesn't have the "no_underscore" hint
@@ -443,7 +445,7 @@ public class CodeEditText extends AppCompatEditText {
 				continue;
 			
 			//Add the keyword
-			tempSyntax.add(new Keyword(name, styles.get(style), function, reference, referenceTarget, parentClass, staticInParentClass));
+			tempSyntax.add(new Keyword(name, styles.get(style), function, reference, referenceTarget, parentClass, staticInParentClass, touchable));
 		}
 		
 		syntax = new Keyword[tempSyntax.size()];
@@ -586,6 +588,7 @@ public class CodeEditText extends AppCompatEditText {
 	
 	@Override 
 	protected void onSelectionChanged(int selStart, int selEnd) {
+		super.onSelectionChanged(selStart, selEnd);
 		updateBracketMatch();
 		updateCursorCompilerProblem();
 	}
@@ -899,7 +902,7 @@ public class CodeEditText extends AppCompatEditText {
 			public void run() {
 				updatingTokens.set(true);
 				
-				Token[] tempTokens = splitTokens(text, 0, new char[] {'(', ')', '[', ']', '{', '}', '=', '+', '-', '/', '*', '"', '\'', '%', '&', '|', '?', ':', ';', '<', '>', ',', '.', ' ', '\\'});
+				Token[] tempTokens = splitTokens(text, 0, new char[] {'!', '(', ')', '[', ']', '{', '}', '=', '+', '-', '/', '*', '"', '\'', '%', '&', '|', '?', ':', ';', '<', '>', ',', '.', ' ', '\\'});
 				
 				for(int i = 0; i < tempTokens.length; i ++) {
 					String nextNonSpace = "";
@@ -1227,13 +1230,18 @@ public class CodeEditText extends AppCompatEditText {
 		if (syntaxLoaded.get()) {
 			for (Keyword keyword : syntax) {
 				if (keyword != null) {
-					if (keyword.name().equals(text) && keyword.function() == function) {
+					if (keyword.name().equals(text) && (keyword.function() == function || keyword.isTouchable())) {
 						return keyword;
 					}
 				}
 			}
+			// Syntax highlighting for functions
+			if(function){
+				TextPaint paint = styles.get("keyword_processing_function");
+				return new Keyword(text, paint, true, "processing", text + "_", "", false, false);
+			}
 		}
-		
+
 		return null;
 	}
 }

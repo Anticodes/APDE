@@ -20,7 +20,7 @@
 		<LinearLayout android:id="@+id/content"
 			android:layout_width="match_parent"
 			android:layout_height="match_parent"
-			android:background="#FFFFFF"
+			android:background="#2B476C"
 			tools:context=".APDE"
 			android:orientation="vertical" >
 			
@@ -264,9 +264,9 @@
 				android:layout_height="match_parent"
 				android:layout_above="@+id/folder_actions"
 				android:choiceMode="singleChoice"
-				android:divider="#CCCCCC"
+				android:divider="#444444"
 				android:dividerHeight="0.5dp"
-				android:background="#EEEEEE"
+				android:background="#2B476C"
 				android:headerDividersEnabled="true" />
 			
 			<LinearLayout android:id="@id/folder_actions"
@@ -274,7 +274,7 @@
 				android:layout_height="wrap_content"
 				android:layout_alignParentBottom="true"
 				android:visibility="gone"
-				android:background="#EEEEEE" >
+				android:background="#AAAAAA" >
 				
 				<ImageView android:id="@+id/new_folder"
 					android:layout_width="0dp"

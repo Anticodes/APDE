@@ -177,13 +177,13 @@ public class FileNavigatorAdapter extends BaseAdapter {
 		} else {
 			convertView.setBackgroundResource(R.drawable.bg_key);
 		}
-		
+
+		text.setTextColor(context.getResources().getColor(R.color.grayed_out));
+
 		if(item.getType().equals(FileItemType.MESSAGE)) {
-			text.setTextColor(context.getResources().getColor(R.color.grayed_out));
 			text.setTextSize(16);
 			((RelativeLayout) convertView).setGravity(Gravity.CENTER);
 		} else {
-			text.setTextColor(0xFF222222);
 			text.setTextSize(18);
 			((RelativeLayout) convertView).setGravity(Gravity.CENTER_VERTICAL);
 		}

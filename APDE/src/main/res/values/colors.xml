@@ -1,16 +1,16 @@
 <resources>
-    <color name="bar_overlay">#31426C</color>
-    <color name="bar_overlay_dark">#ff273557</color>
-    <color name="current_line">#CCCCCC</color>
+    <color name="bar_overlay">#171F33</color>
+    <color name="bar_overlay_dark">#111726</color>
+    <color name="current_line">#5e5e5e</color>
     <color name="message_back">#AAAAAA</color>
     <color name="error_back">#89440F</color>
     <color name="message_text">#000000</color>
     <color name="error_text">#FFFFFF</color>
     <color name="warning_back">#b1a525</color>
-    <color name="warning_text">#FFFFFF</color>
-    <color name="drawer_default_color">#EEEEEE</color>
-    <color name="holo_select">#ff33b5e5</color>
-    <color name="holo_select_light">#7733b5e5</color>
+    <color name="warning_text">#5e5e5e</color>
+    <color name="drawer_default_color">#2B476C</color>
+    <color name="holo_select">#77172538</color>
+    <color name="holo_select_light">#77172538</color>
     <color name="tab_text_color">#EEEEEE</color>
     <!-- <color name="activity_background">#DDDDDD</color> -->
     <color name="activity_background">#222222</color>
@@ -21,7 +21,7 @@
     <color name="grayed_out">#AAAAAA</color>
     <color name="light_gray">#EEEEEE</color>
     <color name="link_color">#CCCCCC</color>
-    <color name="code_edit_highlight_color">#97D8FA</color>
+    <color name="code_edit_highlight_color">#5e5e5e</color>
     <color name="red_select">#ffBF3C3C</color>
     <color name="red_select_light">#77BF3C3C</color>
     
@@ -30,8 +30,8 @@
     <color name="git_diff_hunk_header">#ffbdc964</color>
     <color name="git_diff_no_newline">#ff9673ae</color>
 
-    <color name="find_replace_bar">#ff324f7a</color>
-    <color name="find_replace_replace_bar">#ff365988</color>
+    <color name="find_replace_bar">#263C5C</color>
+    <color name="find_replace_replace_bar">#2B476C</color>
     <color name="find_replace_find_not_found">#bfff1209</color>
     
     <color name="colorPrimary">@color/bar_overlay</color>
