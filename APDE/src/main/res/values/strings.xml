@@ -56,6 +56,8 @@
 	<!-- Messages shown to the user upon success/failure of saving the sketch. -->
 	<string name="message_sketch_save_success">The sketch has been saved.</string>
 	<string name="message_sketch_save_failure">The sketch has not been saved properly.</string>
+	<string name="save_sketch_create_dir_error">Failed to create sketch directory</string>
+	<string name="save_sketch_save_file_error">Failed to save file \"<xliff:g id="sketchFileName" example="">%1$s</xliff:g>\"</string>
 	
 	<!-- Error messages shown to the user when they try to create or rename a tab to an invalid
 	     name. -->
@@ -391,11 +393,7 @@
 	<string name="library_manager_library_author_by">by <xliff:g example="William Smith (calsignlabs.com)" id="author">%1$s</xliff:g></string>
 	
 	<!-- Extract static build resources button in settings. -->
-	<string name="task_extract_static_build_resources_android_jar">Extracting android.jar…</string>
-	<string name="task_extract_static_build_resources_compiled_res">Extracting support library compiled resources…</string>
-	<string name="task_extract_static_build_resources_jni_libs">Extracting support library native libraries…</string>
-	<string name="task_extract_static_build_resources_libs">Extracting support library JARs…</string>
-	<string name="task_extract_static_build_resources_libs_dex">Extracting support library dexed JARs…</string>
+	<string name="task_extract_static_build_resources_start">Extracting static build resources…</string>
 	<string name="task_extract_static_build_resources_done">Finished extracting static build resources.</string>
 	
 	<string name="apde_0_5_upgrade_error">\n\nError upgrading last opened sketch info to v0.5.0.\nPlease report stack trace above to developer.\n\nYour last opened sketch has been copied to a temporary sketch.\nThe original sketch is still there.\n\nYou should not see this message again.</string>
