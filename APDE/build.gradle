@@ -2,12 +2,12 @@ apply plugin: 'com.android.application'
 apply from: new File(rootProject.projectDir, 'gradle/previewBuild.gradle')
 
 android {
-    compileSdkVersion 31
+    compileSdkVersion 32
 
     defaultConfig {
         applicationId "com.calsignlabs.apde"
         minSdkVersion 19
-        targetSdkVersion 31
+        targetSdkVersion 32
         versionCode 34
         versionName "0.5.2"
         multiDexEnabled true
@@ -55,19 +55,15 @@ android {
             java.srcDirs = ['src/androidTest/java']
         }
     }
-
     packagingOptions {
-        // declared by a bunch of eclipse jars
-        exclude 'plugin.xml'
-        exclude 'plugin.properties'
-        exclude 'META-INF/*'
-        exclude 'about_files/*'
-        exclude '*.html'
+        jniLibs {
+            excludes += ['META-INF/*', 'about_files/*']
+        }
+        resources {
+            excludes += ['plugin.xml', 'plugin.properties', 'META-INF/*', 'about_files/*', '*.html']
+        }
     }
 
-    lintOptions {
-        abortOnError false
-    }
 
     useLibrary 'android.test.runner'
     useLibrary 'android.test.base'
@@ -76,6 +72,10 @@ android {
     testOptions {
         animationsDisabled true
     }
+    lint {
+        abortOnError false
+    }
+    namespace 'com.calsignlabs.apdedark'
 }
 
 preBuild.dependsOn project.createAdditionalAssets
@@ -100,10 +100,10 @@ dependencies {
     implementation files('libs/zipsigner-lib-1.17.jar')
     implementation files('libs/zipsigner-lib-optional-1.17.jar')
     implementation 'androidx.legacy:legacy-support-v4:1.0.0'
-    implementation 'androidx.appcompat:appcompat:1.4.0'
-    implementation 'com.google.android.material:material:1.4.0'
+    implementation 'androidx.appcompat:appcompat:1.5.1'
+    implementation 'com.google.android.material:material:1.6.1'
     implementation 'com.takisoft.preferencex:preferencex:1.1.0'
-    implementation 'com.google.android.gms:play-services-auth:19.2.0'
+    implementation 'com.google.android.gms:play-services-auth:20.3.0'
     implementation 'com.google.android.gms:play-services-wearable:17.1.0'
     implementation 'androidx.test.espresso.idling:idling-concurrent:3.4.0'
 

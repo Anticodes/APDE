@@ -29,6 +29,9 @@ import androidx.test.uiautomator.UiDevice;
 import androidx.test.uiautomator.UiObject;
 import androidx.test.uiautomator.UiObjectNotFoundException;
 
+import com.calsignlabs.apde.build.ExtractStaticBuildResources;
+import com.calsignlabs.apde.build.StaticBuildResources;
+
 import org.junit.After;
 import org.junit.AfterClass;
 import org.junit.Before;
@@ -37,6 +40,7 @@ import org.junit.Rule;
 import org.junit.runner.RunWith;
 
 import java.io.File;
+import java.io.IOException;
 import java.util.concurrent.ExecutionException;
 
 @RunWith(AndroidJUnit4.class)
@@ -54,7 +58,8 @@ public abstract class BaseTest {
 	
 	@BeforeClass
 	public static void performBeforeClass() {
-		eraseData();
+		// TODO: this is causing problems for some reason.
+		// eraseData();
 	}
 	
 	@Rule
@@ -143,11 +148,24 @@ public abstract class BaseTest {
 		}
 	}
 	
+	/**
+	 * Extract static build resources. These often get corrupted during tests because we kill
+	 * things willy-nilly.
+	 */
+	public void extractStaticBuildResources() {
+		try {
+			StaticBuildResources.extractAll(getInstrumentation().getTargetContext());
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+	}
+	
 	@Before
 	public void performBefore() {
 		clearCrashDialog();
 		dismissStartupDialogs();
 		installSketchPreviewerIfNeeded();
+		extractStaticBuildResources();
 	}
 	
 	protected void awaitBuild() {
@@ -175,10 +193,5 @@ public abstract class BaseTest {
 	public void performAfter() {
 		shutdownTimers();
 		clearCrashDialog();
-	}
-	
-	@AfterClass
-	public static void performAfterClass() {
-		// Nothing here yet!
 	}
 }
