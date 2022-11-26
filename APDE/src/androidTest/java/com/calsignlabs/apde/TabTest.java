@@ -27,11 +27,9 @@ import static org.junit.Assert.assertTrue;
 import androidx.test.espresso.ViewInteraction;
 import androidx.test.filters.LargeTest;
 
-import org.junit.BeforeClass;
 import org.junit.Test;
 
 import java.io.File;
-import java.io.IOException;
 
 /**
  * Test sketch tabs.

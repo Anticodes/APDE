@@ -1,6 +1,5 @@
 package com.calsignlabs.apde.tool;
 
-import android.content.DialogInterface;
 import androidx.appcompat.app.AlertDialog;
 import android.view.MenuItem;
 

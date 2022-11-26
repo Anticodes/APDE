@@ -4,7 +4,6 @@ import android.content.Context;
 import android.net.Uri;
 import android.os.Handler;
 import android.os.Message;
-import android.os.Parcel;
 import android.os.ParcelFileDescriptor;
 
 import androidx.annotation.Nullable;
@@ -23,7 +22,6 @@ import java.lang.reflect.Method;
 import java.util.Locale;
 import java.util.Properties;
 import java.util.zip.ZipEntry;
-import java.util.zip.ZipFile;
 import java.util.zip.ZipInputStream;
 
 //This is a utility class for managing libraries (maybe other contributions later) - installing them, checking for updates (planned), etc.

@@ -31,7 +31,7 @@
 			android:required="true"/>
 		
 		<service
-			android:name=".WatchfaceLoader"
+			android:name="com.calsignlabs.apde.wearcompanion.WatchfaceLoader"
 			android:enabled="true"
 			android:exported="true">
 			
@@ -53,7 +53,7 @@
 		</provider>
 		
 		<activity
-			android:name=".CompanionActivity"
+			android:name="com.calsignlabs.apde.wearcompanion.CompanionActivity"
 			android:label="@string/title_activity_companion">
 			
 			<intent-filter>
@@ -66,7 +66,7 @@
 		     enabled when sketch is run. -->
 		
 		<service
-			android:name=".watchface.CanvasWatchFaceService$A"
+			android:name="com.calsignlabs.apde.wearcompanion.watchface.CanvasWatchFaceService$A"
 			android:label="@string/watchface_label_canvas_a"
 			android:permission="android.permission.BIND_WALLPAPER"
 			android:enabled="false">
@@ -84,7 +84,7 @@
 			</intent-filter>
 		</service>
 		<service
-			android:name=".watchface.CanvasWatchFaceService$B"
+			android:name="com.calsignlabs.apde.wearcompanion.watchface.CanvasWatchFaceService$B"
 			android:label="@string/watchface_label_canvas_b"
 			android:permission="android.permission.BIND_WALLPAPER"
 			android:enabled="false">
@@ -103,7 +103,7 @@
 		</service>
 		
 		<service
-			android:name=".watchface.GLESWatchFaceService$A"
+			android:name="com.calsignlabs.apde.wearcompanion.watchface.GLESWatchFaceService$A"
 			android:label="@string/watchface_label_gles_a"
 			android:permission="android.permission.BIND_WALLPAPER"
 			android:enabled="false">
@@ -121,7 +121,7 @@
 			</intent-filter>
 		</service>
 		<service
-			android:name=".watchface.GLESWatchFaceService$B"
+			android:name="com.calsignlabs.apde.wearcompanion.watchface.GLESWatchFaceService$B"
 			android:label="@string/watchface_label_gles_b"
 			android:permission="android.permission.BIND_WALLPAPER"
 			android:enabled="false">

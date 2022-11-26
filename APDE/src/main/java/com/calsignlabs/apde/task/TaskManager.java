@@ -8,7 +8,6 @@ import android.view.View;
 import com.calsignlabs.apde.APDE;
 import com.calsignlabs.apde.R;
 import com.calsignlabs.apde.build.dag.BuildContext;
-import com.calsignlabs.apde.build.dag.ModularBuild;
 import com.calsignlabs.apde.support.CustomProgressDialog;
 
 import java.util.HashMap;

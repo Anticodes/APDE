@@ -7,14 +7,10 @@ import static androidx.test.espresso.action.ViewActions.typeText;
 import static androidx.test.espresso.assertion.ViewAssertions.matches;
 import static androidx.test.espresso.matcher.ViewMatchers.withId;
 import static androidx.test.espresso.matcher.ViewMatchers.withText;
-import static com.calsignlabs.apde.TestUtil.matchesAnyString;
 import static com.calsignlabs.apde.TestUtil.newSketch;
 import static com.calsignlabs.apde.TestUtil.sleep;
 
 import androidx.test.filters.LargeTest;
-import androidx.test.platform.app.InstrumentationRegistry;
-import androidx.test.uiautomator.UiDevice;
-import androidx.test.uiautomator.UiObject;
 
 import org.hamcrest.core.StringEndsWith;
 import org.junit.Test;

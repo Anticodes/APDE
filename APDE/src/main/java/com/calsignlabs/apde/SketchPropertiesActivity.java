@@ -20,7 +20,6 @@ import com.calsignlabs.apde.support.FileSelection;
 
 import java.io.File;
 import java.io.IOException;
-import java.io.InputStream;
 import java.util.Map.Entry;
 
 public class SketchPropertiesActivity extends AppCompatActivity implements Toolbar.OnMenuItemClickListener {

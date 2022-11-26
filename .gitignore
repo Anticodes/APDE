@@ -14,3 +14,5 @@ build/**
 local.properties
 *.iml
 APDE/src/main/gen
+/APDE/release/APDE-release.apk
+/APDE/release/output-metadata.json

@@ -16,7 +16,7 @@
 		
 		<activity
 			android:exported="true"
-			android:name=".PreviewActivity"
+			android:name="com.calsignlabs.apde.sketchpreview.PreviewActivity"
 			android:theme="@style/Theme.AppCompat.Light.NoActionBar">
 			
 			<intent-filter>

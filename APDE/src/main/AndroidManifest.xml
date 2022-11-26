@@ -3,7 +3,7 @@
 	xmlns:android="http://schemas.android.com/apk/res/android"
 	package="com.calsignlabs.apde"
 	android:installLocation="auto">
-	
+
 	<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
 	<uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
 	<uses-permission android:name="android.permission.VIBRATE" />
@@ -13,7 +13,7 @@
 	<uses-permission-sdk-23 android:name="android.permission.REQUEST_DELETE_PACKAGES" />
 	
 	<application
-		android:name=".APDE"
+		android:name="com.calsignlabs.apde.APDE"
 		android:allowBackup="true"
 		android:icon="@drawable/ic_launcher"
 		android:label="@string/apde_app_title"
@@ -22,7 +22,7 @@
 		android:extractNativeLibs="true"> <!-- support AAPT on API 29+ -->
 		
 		<activity
-			android:name=".EditorActivity"
+			android:name="com.calsignlabs.apde.EditorActivity"
 			android:label="@string/apde_app_title"
 			android:theme="@style/FullscreenTheme"
 			android:exported="true">
@@ -59,39 +59,39 @@
 			</intent-filter>
 		</activity>
 		<activity
-			android:name=".SketchPropertiesActivity"
+			android:name="com.calsignlabs.apde.SketchPropertiesActivity"
 			android:icon="@drawable/ic_launcher"
 			android:label="@string/title_activity_sketch_properties"
 			android:theme="@style/PreferencesTheme"/>
 		<activity
-			android:name=".SettingsActivity"
+			android:name="com.calsignlabs.apde.SettingsActivity"
 			android:icon="@drawable/ic_launcher"
 			android:label="@string/title_activity_settings"
 			android:theme="@style/PreferencesTheme"/>
 		<activity
-			android:name=".LicensesActivity"
+			android:name="com.calsignlabs.apde.LicensesActivity"
 			android:hardwareAccelerated="true"
 			android:icon="@drawable/ic_launcher"
 			android:label="@string/pref_about_licenses"
 			android:theme="@style/PreferencesTheme"/>
 		<activity
-			android:name=".PermissionsActivity"
+			android:name="com.calsignlabs.apde.PermissionsActivity"
 			android:label="@string/title_activity_permissions"
 			android:theme="@style/FullscreenTheme"/>
 		<activity
-			android:name=".CharacterTraySettingsActivity"
+			android:name="com.calsignlabs.apde.CharacterTraySettingsActivity"
 			android:label="@string/title_activity_character_tray_settings"
 			android:theme="@style/PreferencesTheme"/>
 		<activity
-			android:name=".LibraryManagerActivity"
+			android:name="com.calsignlabs.apde.LibraryManagerActivity"
 			android:label="@string/title_activity_library_manager"
 			android:theme="@style/FullscreenTheme"/>
 		<activity
-			android:name=".vcs.GitHistoryActivity"
+			android:name="com.calsignlabs.apde.vcs.GitHistoryActivity"
 			android:label="@string/git_history"
 			android:theme="@style/FullscreenTheme"/>
 		<activity
-			android:name=".ReferenceActivity"
+			android:name="com.calsignlabs.apde.ReferenceActivity"
 			android:label="@string/title_activity_reference"
 			android:theme="@style/FullscreenTheme"/>
 		<!-- Lets us share APKs and other files with other applications -->

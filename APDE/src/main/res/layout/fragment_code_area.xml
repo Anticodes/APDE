@@ -25,7 +25,8 @@
                           android:paddingLeft="10dp"
                           android:paddingRight="10dp" >
                 
-                <com.calsignlabs.apde.CodeEditText android:id="@+id/code"
+                <com.calsignlabs.apde.CodeEditText
+                    android:id="@+id/code"
                                                    android:inputType="text|textNoSuggestions|textMultiLine"
                                                    android:layout_width="wrap_content"
                                                    android:layout_height="wrap_content"
