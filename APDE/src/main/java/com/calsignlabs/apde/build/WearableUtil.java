@@ -27,7 +27,7 @@ public class WearableUtil {
 	}
 	
 	public static void sendApkToWatch(Context context, File apkFile, final ResultCallback callback) {
-		Uri apkUri = FileProvider.getUriForFile(context, "com.calsignlabs.apde.fileprovider", apkFile);
+		Uri apkUri = FileProvider.getUriForFile(context, "com.calsignlabs.apdebug.fileprovider", apkFile);
 		Asset asset = Asset.createFromUri(apkUri);
 		PutDataMapRequest dataMap = PutDataMapRequest.create("/apk");
 		dataMap.getDataMap().putAsset("apk", asset);

@@ -1825,7 +1825,7 @@ public class APDE extends MultiDexApplication {
 		
 		if (android.os.Build.VERSION.SDK_INT >= 24) {
 			// Need to use FileProvider
-			uri = FileProvider.getUriForFile(activityContext, "com.calsignlabs.apde.fileprovider", sketchFolder);
+			uri = FileProvider.getUriForFile(activityContext, "com.calsignlabs.apdebug.fileprovider", sketchFolder);
 			intent.addFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION);
 		} else {
 			uri = Uri.fromFile(sketchFolder);

@@ -138,7 +138,7 @@ public class ExportTest extends BaseTest {
 				if (android.os.Build.VERSION.SDK_INT >= 24) {
 					// Need to use FileProvider
 					Uri apkUri = FileProvider.getUriForFile( editorActivity.getGlobalState(),
-							"com.calsignlabs.apde.fileprovider", apk);
+							"com.calsignlabs.apdebug.fileprovider", apk);
 					promptInstall = new Intent(Intent.ACTION_INSTALL_PACKAGE).setData(apkUri)
 							.setFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION);
 				} else {

@@ -892,7 +892,7 @@ public class Preprocessor {
 		Map<String, String> options = new HashMap<>();
 		
 		// Not sure whether or not we can use 1.8
-		JavaCore.setComplianceOptions(JavaCore.VERSION_1_7, options);
+		JavaCore.setComplianceOptions(JavaCore.VERSION_1_8, options);
 		
 		COMPILER_OPTIONS = Collections.unmodifiableMap(options);
 	}

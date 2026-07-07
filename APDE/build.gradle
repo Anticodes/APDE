@@ -5,7 +5,7 @@ android {
     compileSdkVersion 35
 
     defaultConfig {
-        applicationId "com.calsignlabs.apde"
+        applicationId "com.calsignlabs.apdebug"
         minSdkVersion 19
         targetSdkVersion 35
         versionCode 34

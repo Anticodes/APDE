@@ -330,7 +330,7 @@ public class SketchPreviewerBuilder extends Task {
 		Intent promptInstall;
 		
 		if (android.os.Build.VERSION.SDK_INT >= 24) {
-			Uri uri = FileProvider.getUriForFile(editor, "com.calsignlabs.apde.fileprovider", finalApk);
+			Uri uri = FileProvider.getUriForFile(editor, "com.calsignlabs.apdebug.fileprovider", finalApk);
 			promptInstall = new Intent(Intent.ACTION_INSTALL_PACKAGE).setData(uri).setFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION);
 		} else {
 			if (!finalApk.setReadable(true, false)) {

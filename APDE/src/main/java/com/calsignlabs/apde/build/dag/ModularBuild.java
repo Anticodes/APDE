@@ -797,7 +797,7 @@ public class ModularBuild {
 	protected Uri makeFileAvailableToPreview(File file) {
 		Uri uri;
 		if (android.os.Build.VERSION.SDK_INT >= 24) {
-			uri = FileProvider.getUriForFile(global, "com.calsignlabs.apde.fileprovider", file);
+			uri = FileProvider.getUriForFile(global, "com.calsignlabs.apdebug.fileprovider", file);
 			global.grantUriPermission("com.calsignlabs.apde.sketchpreview", uri, Intent.FLAG_GRANT_READ_URI_PERMISSION);
 		} else {
 			if (!file.setReadable(true, false)) {

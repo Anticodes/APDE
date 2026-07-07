@@ -855,10 +855,10 @@ public class Build {
 			args.add("-classpath");
 			args.add(joinFilesForEcj(classPathEntries));
 			
-			// target java 1.6
-			args.add("-1.6");
+			// target java 1.8
+			args.add("-1.8");
 			args.add("-target");
-			args.add("1.6");
+			args.add("1.8");
 			
 			// disable annotation processors
 			args.add("-proc:none");
@@ -1168,7 +1168,7 @@ public class Build {
 			
 			if (android.os.Build.VERSION.SDK_INT >= 24) {
 				// Need to use FileProvider
-				Uri apkUri = FileProvider.getUriForFile(editor, "com.calsignlabs.apde.fileprovider", apkFile);
+				Uri apkUri = FileProvider.getUriForFile(editor, "com.calsignlabs.apdebug.fileprovider", apkFile);
 				promptInstall = new Intent(Intent.ACTION_INSTALL_PACKAGE).setData(apkUri).setFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION);
 			} else {
 				// The package manager doesn't seem to like FileProvider...
@@ -1361,7 +1361,7 @@ public class Build {
 	protected Uri makeFileAvailableToPreview(File file) {
 		Uri uri;
 		if (android.os.Build.VERSION.SDK_INT >= 24) {
-			uri = FileProvider.getUriForFile(editor, "com.calsignlabs.apde.fileprovider", file);
+			uri = FileProvider.getUriForFile(editor, "com.calsignlabs.apdebug.fileprovider", file);
 			editor.grantUriPermission("com.calsignlabs.apde.sketchpreview", uri, Intent.FLAG_GRANT_READ_URI_PERMISSION);
 		} else {
 			if (!file.setReadable(true, false)) {

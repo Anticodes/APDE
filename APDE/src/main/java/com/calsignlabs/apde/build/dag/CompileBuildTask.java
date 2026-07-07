@@ -28,7 +28,7 @@ public class CompileBuildTask extends ArgLambdaBuildTask {
 			addAll(args, "-classpath", src.get(context).getAbsolutePath()
 					+ ":" + gen.get(context).getAbsolutePath()
 					+ ":" + libs.get(context).getAbsolutePath());
-			addAll(args, "-1.6", "-target", "1.6");
+			addAll(args, "-1.8", "-target", "1.8");
 			args.add("-proc:none");
 			addAll(args, "-d", binClasses.get(context).getAbsolutePath());
 			args.add(src.get(context).getAbsolutePath() + "/");
